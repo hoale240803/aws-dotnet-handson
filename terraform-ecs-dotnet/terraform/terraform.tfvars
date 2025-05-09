@@ -1,0 +1,5 @@
+aws_region            = "us-east-1"
+aws_availability_zone = "us-east-1a"
+container_image       = "nginx:latest"
+db_username           = "postgres"
+db_password           = "supersecurepassword123"
