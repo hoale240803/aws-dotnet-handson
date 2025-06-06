@@ -25,13 +25,40 @@ In this Challenge Lab, you will configure and deploy Elastic Compute Cloud (EC2)
 ![alt text](image.png)
 ![alt text](image-1.png)
 
+![alt text](image-5.png)
+
 # Create a launch template
 
 ![alt text](image-2.png)
 
+```
+#!/bin/bash
+yum update -y
+sudo amazon-linux-extras install epel -y
+sudo yum install stress -y
+amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+usermod -a -G apache ec2-user
+chown -R ec2-user:apache /var/www
+chmod 2775 /var/www
+find /var/www -type d -exec chmod 2775 {} \;
+find /var/www -type f -exec chmod 0664 {} \;
+echo '<center><h1>Welcome to Server: <?php echo $_SERVER["SERVER_ADDR"]; ?></h1><br><br></center>' > /var/www/html/index.php
+```
+
+![alt text](image-10.png)
+![alt text](image-11.png)
+
 # Create ASG - auto scaling group
 
 ![alt text](image-3.png)
+![alt text](image-6.png)
+
+![alt text](image-7.png)
+![alt text](image-8.png)
+![alt text](image-9.png)
 
 ## outcome
 
