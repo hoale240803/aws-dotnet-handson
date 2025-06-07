@@ -4,23 +4,29 @@ In this challenge, you will implement scaling for an Amazon Relational Database 
 
 # Scenario
 
-In this Challenge Lab, you will implement scaling for an Amazon Relational Database Service (RDS) instance. First, you will create security groups, and then you will deploy a MySQL DB instance. Next, you will create an Amazon Elastic Cloud Compute (EC2) instance to act as a server, and then you will add data to the database. Finally, you will scale the RDS instance vertically and horizontally, and then you will verify that you can access the data.
+In this Challenge Lab, you will implement scaling for an Amazon Relational Database Service (RDS) instance.
+
+First, you will create security groups, and then you will deploy a MySQL DB instance.
+
+Next, you will create an Amazon Elastic Cloud Compute (EC2) instance to act as a server, and then you will add data to the database.
+
+Finally, you will scale the RDS instance vertically and horizontally, and then you will verify that you can access the data.
 
 # Steps
 
-# Create security group
+## Create security group
 
 ![Create security groups](image.png)
 ![Security group for SSH ](image-1.png)
 ![ MYSQL/Aurora DBSG-52002013](image-2.png)
 
-# Create db subnet group
+## Create db subnet group
 
 ![create db subnet group](image-3.png)
 ![Details](image-4.png)
 ![Create db instance](image-5.png)
 
-# Lauch bastion host ec2
+## Launch bastion host ec2
 
 ![alt text](image-6.png)
 
@@ -33,7 +39,7 @@ sudo yum install -y php-{cgi,curl,mbstring,gd,mysqlnd,gettext,json,xml,fpm,intl,
 sudo yum install -y mariadb105
 ```
 
-# Configure database instance
+## Configure database instance
 
 ![configure database instance](image-7.png)
 
@@ -67,12 +73,12 @@ INSERT INTO subscribers ( name, benefactor, startdate) VALUES
  ( 'Goldie', 'Pat', '2018-06-22' );
 ```
 
-# Verticall scale
+## Vertical scale
 
 ![change db instance t3.small](image-8.png)
 ![alt text](image-9.png)
 
-# Horizontal
+## Horizontal scale
 
 ![alt text](image-10.png)
 ![alt text](image-11.png)
@@ -105,10 +111,17 @@ SELECT * FROM subscribers;
 # Summary
 
 Created security groups.
+
 Created a DB subnet group.
+
 Created a MySQL DB instance in RDS.
+
 Launched an EC2 bastion host instance.
+
 Configured a database instance.
+
 Vertically scaled an RDS DB instance.
+
 Horizontally scaled RDS.
+
 Validated data access.

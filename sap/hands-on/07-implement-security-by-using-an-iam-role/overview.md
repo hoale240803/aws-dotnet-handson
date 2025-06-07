@@ -1,16 +1,22 @@
 # Implement security by using an iam role
 
-# Understanding problem
+# Understanding scenario
 
 In this challenge, you will create create an Identity and Access Management (IAM) role that you will use to access an Amazon Simple Storage Service (Amazon S3) bucket from an Elastic Compute Cloud (EC2) instance. First, you will create an Amazon S3 bucket to store objects, and then you will create a role to provide access to the bucket from an EC2 instance. Next, you will create an IAM policy that provides full control of the bucket, and then you will assign the policy to the role. Finally, you will create a new EC2 instance that will use the role, and then you will sign in to the EC2 instance and test the role.
 
 # Steps
 
-In this Challenge Lab, you will create an Identity and Access Management (IAM) role that you will use to access an Amazon Simple Storage Service (Amazon S3) bucket from an Elastic Compute Cloud (EC2) instance. First, you will create an Amazon S3 bucket to store objects, and then you will create a role to provide access to the bucket from an EC2 instance. Next, you will create an IAM policy that provides full control of the bucket, and then you will assign the policy to the role. Finally, you will create a new EC2 instance that will use the role, and then you will sign in to the EC2 instance and test the role.
+In this Challenge Lab, you will create an Identity and Access Management (IAM) role that you will use to access an Amazon Simple Storage Service (Amazon S3) bucket from an Elastic Compute Cloud (EC2) instance.
 
-## Create an s3 bucket
+First, you will create an Amazon S3 bucket to store objects, and then you will create a role to provide access to the bucket from an EC2 instance.
 
-![create an s3 bucket](image.png)
+Next, you will create an IAM policy that provides full control of the bucket, and then you will assign the policy to the role.
+
+Finally, you will create a new EC2 instance that will use the role, and then you will sign in to the EC2 instance and test the role.
+
+## Create a s3 bucket
+
+![create a s3 bucket](image.png)
 
 ## Create a policy
 
@@ -50,7 +56,7 @@ Note: S3 policy
 
 # Question
 
-khác nhau giữa `Set permissions boundary - optional` với `Permissions policies`
+1. khác nhau giữa `Set permissions boundary - optional` với `Permissions policies`
 
 # Create instance
 
