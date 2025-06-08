@@ -12,9 +12,25 @@ Finally, you will upload a file, and then you will verify that the notification 
 
 ## 1. Create S3
 
+![alt text](image.png)
+
+![alt text](image-1.png)
+
 ## 2. Create an SNS topic
 
-## 3. Configure access policy for SNS topic
+![alt text](image-2.png)
+
+![alt text](image-3.png)
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+
+## 3. Configure an access policy for SNS topic
+
+![alt text](image-6.png)
+
+Edit sns policy allow listen every action of s3 event, the publish notification through email
 
 ```
 {
@@ -43,6 +59,16 @@ Finally, you will upload a file, and then you will verify that the notification 
 ```
 
 please change `"Resource": "arn:aws:sns:us-east-2:xxx:S3-Notify",` and `"aws:SourceArn": "arn:aws:s3:::files-xxx"` your self
+
+# Configure an notification event for an s3 bucket
+
+![alt text](image-7.png)
+
+![alt text](image-8.png)
+
+![alt text](image-9.png)
+
+![alt text](image-10.png)
 
 # Summary
 
